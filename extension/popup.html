@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+    h1 {
+      font-size: 18px;
+      margin: 0 0 15px 0;
+      color: #1a73e8;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #1a73e8;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    button:hover {
+      background-color: #1557b0;
+    }
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+    #status {
+      margin-top: 15px;
+      padding: 10px;
+      background-color: #f1f3f4;
+      border-radius: 4px;
+      font-size: 13px;
+      display: none;
+    }
+    #results {
+      margin-top: 15px;
+      display: none;
+    }
+    .molecule-info {
+      padding: 15px;
+      background-color: #f8f9fa;
+      border-radius: 4px;
+      border-left: 4px solid #1a73e8;
+    }
+    .molecule-info h2 {
+      margin: 0 0 10px 0;
+      font-size: 16px;
+      color: #202124;
+    }
+    .molecule-info p {
+      margin: 5px 0;
+      font-size: 13px;
+      color: #5f6368;
+    }
+    .molecule-info a {
+      color: #1a73e8;
+      text-decoration: none;
+    }
+    .molecule-info a:hover {
+      text-decoration: underline;
+    }
+    #previewContainer {
+      margin-top: 15px;
+      display: none;
+    }
+    #preview {
+      max-width: 100%;
+      border: 2px solid #ddd;
+      border-radius: 4px;
+    }
+    .instructions {
+      font-size: 12px;
+      color: #5f6368;
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #e8f0fe;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧪 Molecule Structure Detector</h1>
+  
+  <div class="instructions">
+    Click the button below to capture a molecular structure from the current page. The extension will analyze it and find information from chemistry databases.
+  </div>
+
+  <button id="captureBtn">📸 Capture Molecule Structure</button>
+  
+  <div id="previewContainer">
+    <h3 style="font-size: 14px; margin: 0 0 10px 0;">Captured Image:</h3>
+    <img id="preview" alt="Captured molecule">
+  </div>
+  
+  <div id="status"></div>
+  
+  <div id="results"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
